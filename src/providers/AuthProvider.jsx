@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
   const logOut = async () => {
     setLoading(true);
     try {
-      await axios.post('http://localhost:5000/logout', {}, { withCredentials: true });
+      await axios.post('http://localhost:5001/logout', {}, { withCredentials: true });
     } catch (err) {
       console.error('Logout API failed:', err);
     }
@@ -65,7 +65,7 @@ export const AuthProvider = ({ children }) => {
       if (currentUser && currentUser.email) {
         // Exchange for JWT token
         try {
-          const response = await axios.post('http://localhost:5000/jwt', {
+          const response = await axios.post('http://localhost:5001/jwt', {
             email: currentUser.email
           });
           if (response.data?.token) {

@@ -17,7 +17,7 @@ const Ideas = () => {
   useEffect(() => {
     setLoading(true);
     // Fetch from API
-    axios.get('http://localhost:5000/ideas', {
+    axios.get('http://localhost:5001/ideas', {
       params: {
         search: searchTerm,
         category: selectedCategory
