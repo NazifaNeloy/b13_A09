@@ -17,7 +17,8 @@ const Ideas = () => {
   useEffect(() => {
     setLoading(true);
     // Fetch from API
-    axios.get('http://localhost:5001/ideas', {
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+    axios.get(`${apiUrl}/ideas`, {
       params: {
         search: searchTerm,
         category: selectedCategory

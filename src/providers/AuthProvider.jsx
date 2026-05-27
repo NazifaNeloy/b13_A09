@@ -10,6 +10,8 @@ import {
 import { auth, googleProvider, isMockAuth } from '../firebase/firebase.config';
 import axios from 'axios';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+
 export const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
@@ -32,7 +34,7 @@ export const AuthProvider = ({ children }) => {
           setUser(mockUser);
           
           try {
-            const response = await axios.post('http://localhost:5001/jwt', { email });
+            const response = await axios.post(`${API_URL}/jwt`, { email });
             if (response.data?.token) {
               localStorage.setItem('token', response.data.token);
             }
@@ -64,7 +66,7 @@ export const AuthProvider = ({ children }) => {
           setUser(mockUser);
           
           try {
-            const response = await axios.post('http://localhost:5001/jwt', { email });
+            const response = await axios.post(`${API_URL}/jwt`, { email });
             if (response.data?.token) {
               localStorage.setItem('token', response.data.token);
             }
@@ -96,7 +98,7 @@ export const AuthProvider = ({ children }) => {
           setUser(mockUser);
           
           try {
-            const response = await axios.post('http://localhost:5001/jwt', { email: 'tester@ideavault.com' });
+            const response = await axios.post(`${API_URL}/jwt`, { email: 'tester@ideavault.com' });
             if (response.data?.token) {
               localStorage.setItem('token', response.data.token);
             }
@@ -116,7 +118,7 @@ export const AuthProvider = ({ children }) => {
   const logOut = async () => {
     setLoading(true);
     try {
-      await axios.post('http://localhost:5001/logout', {}, { withCredentials: true });
+      await axios.post(`${API_URL}/logout`, {}, { withCredentials: true });
     } catch (err) {
       console.error('Logout API failed:', err);
     }
@@ -162,7 +164,7 @@ export const AuthProvider = ({ children }) => {
           setUser(parsedUser);
           // Refresh JWT token on boot
           try {
-            const response = await axios.post('http://localhost:5001/jwt', {
+            const response = await axios.post(`${API_URL}/jwt`, {
               email: parsedUser.email
             });
             if (response.data?.token) {
@@ -183,7 +185,7 @@ export const AuthProvider = ({ children }) => {
       
       if (currentUser && currentUser.email) {
         try {
-          const response = await axios.post('http://localhost:5001/jwt', {
+          const response = await axios.post(`${API_URL}/jwt`, {
             email: currentUser.email
           });
           if (response.data?.token) {

@@ -82,7 +82,8 @@ const Home = () => {
 
   // Fetch trending ideas
   useEffect(() => {
-    axios.get('http://localhost:5001/ideas/trending')
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+    axios.get(`${apiUrl}/ideas/trending`)
       .then(res => {
         setTrendingIdeas(res.data);
         setLoadingIdeas(false);
