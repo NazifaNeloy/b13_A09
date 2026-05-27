@@ -1,16 +1,55 @@
-# React + Vite
+# IdeaVault – Startup Idea Sharing Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+IdeaVault is a premium single-page web application (SPA) where builders, creators, and investors gather to share groundbreaking startup concepts, evaluate business feasibility programmatically, and validate ideas collectively through feedback threads.
 
-Currently, two official plugins are available:
+## 🚀 Live Demonstration Link
+👉 **[IdeaVault Live Site (Firebase Hosting)](https://ideavault-d86b7.web.app)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Key Platform Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **💡 Disruptive Pitch Vault**: Share comprehensive startup models, estimated launch budgets, target audience metrics, and problem/solution parameters inside a beautifully formatted, responsive catalog.
+- **⚡ Interactive Pitch Feasibility Deck Estimator**: An onboard mathematical simulator tool allowing users to adjust operational budget thresholds, target reach scales, and sector uniqueness to calculate a business viability index with dynamic executive suggestions.
+- **🗺️ Startup Ecosystem Growth timeline stepper**: An interactive navigation widget illustrating detailed operational milestones, metrics targets, and execution strategies sequentially from Pre-Seed Ideation to Unicorn Scale.
+- **🎨 Curated Glassmorphism Design System**: Built with modern, harmonious custom Vanilla CSS styling tokens, featuring smooth micro-animations, customizable responsive forms, and a persistent dark mode toggle mapped globally across all views.
+- **🔐 Firebase Auth & Secure Server JWT Coordination**: Leverages Firebase Authentication (supporting secure Email/Password and Google OAuth logins) integrated seamlessly with client-side JWT token storage to guard private routes and securely authenticate database operations.
+- **💬 Community Validation comments CRUD**: Engages users via real-time collaborative discussion threads, allowing innovators to write, edit, and delete constructive feedback recommendations on posted pitches.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technology Stack
+
+- **Client Boilerplate**: React 18 + Vite (ES6 Modules)
+- **Styling Architecture**: Custom Vanilla CSS (Design tokens, glassmorphism, responsive grids)
+- **Routing Engine**: React Router DOM (v6)
+- **Authentication**: Firebase Authentication SDK
+- **Alert Notifications**: React Hot Toast
+- **Animations & Effects**: Canvas Confetti (For submission celebrations!)
+- **Networking**: Axios + Secure Request Interceptors
+
+---
+
+## 💻 Quick Start Guide
+
+1. Navigate to the client folder:
+   ```bash
+   cd ideavault-client
+   ```
+2. Install client-side packages:
+   ```bash
+   npm install
+   ```
+3. Set up your `.env.local` environmental keys inside the root:
+   ```env
+   VITE_FIREBASE_API_KEY=your_firebase_api_key
+   VITE_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+   VITE_FIREBASE_PROJECT_ID=your_firebase_project_id
+   VITE_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+   VITE_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+   VITE_FIREBASE_APP_ID=your_firebase_app_id
+   ```
+4. Fire up the high-performance local hot-reloaded development environment:
+   ```bash
+   npm run dev
+   ```
