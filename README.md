@@ -3,7 +3,7 @@
 IdeaVault is a premium single-page web application (SPA) where builders, creators, and investors gather to share groundbreaking startup concepts, evaluate business feasibility programmatically, and validate ideas collectively through feedback threads.
 
 ## 🚀 Live Demonstration Link
-👉 **[IdeaVault Live Site (Vercel)](https://b13-a09-murex.vercel.app/)**
+👉 **[IdeaVault Live Site (Vercel)](https://ideavault-client-neon.vercel.app/)** (Backup link: [https://b13-a09-murex.vercel.app/](https://b13-a09-murex.vercel.app/))
 
 ## 📂 GitHub Repository
 👉 **[GitHub Repository (NazifaNeloy/b13_A09)](https://github.com/NazifaNeloy/b13_A09)**
