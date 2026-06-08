@@ -1,7 +1,13 @@
 import axios from 'axios';
 
+const getApiUrl = () => {
+  if (import.meta.env.VITE_API_URL) return import.meta.env.VITE_API_URL;
+  const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  return isLocal ? 'http://localhost:5001' : 'https://b13-a09-server-chi.vercel.app';
+};
+
 const axiosSecure = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5001',
+  baseURL: getApiUrl(),
   withCredentials: true
 });
 

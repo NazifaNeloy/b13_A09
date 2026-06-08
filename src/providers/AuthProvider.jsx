@@ -10,7 +10,13 @@ import {
 import { auth, googleProvider, isMockAuth } from '../firebase/firebase.config';
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+const getApiUrl = () => {
+  if (import.meta.env.VITE_API_URL) return import.meta.env.VITE_API_URL;
+  const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  return isLocal ? 'http://localhost:5001' : 'https://b13-a09-server-chi.vercel.app';
+};
+
+const API_URL = getApiUrl();
 
 export const AuthContext = createContext(null);
 
