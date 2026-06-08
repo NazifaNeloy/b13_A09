@@ -5,6 +5,9 @@ IdeaVault is a premium single-page web application (SPA) where builders, creator
 ## 🚀 Live Demonstration Link
 👉 **[IdeaVault Live Site (Firebase Hosting)](https://ideavault-d86b7.web.app)**
 
+## 📂 GitHub Repository
+👉 **[GitHub Repository (NazifaNeloy/b13_A09)](https://github.com/NazifaNeloy/b13_A09)**
+
 ---
 
 ## ✨ Key Platform Features
