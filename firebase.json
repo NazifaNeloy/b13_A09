@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "ideavault-d86b7",
     "public": "dist",
     "ignore": [
       "firebase.json",
